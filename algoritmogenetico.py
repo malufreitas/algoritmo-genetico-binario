@@ -23,7 +23,7 @@ def mutacao(filho):
     enfermeira = ''
     for bit in filho.valor_binario:
         taxaMutacao = random.uniform(0,1)
-        if(taxaMutacao <= 0.01):
+        if(taxaMutacao <= 0.1):
             if bit == '0':
                 enfermeira += '1'
             else:
@@ -159,10 +159,9 @@ def algoritmo_genetico(numero_populacao, iteracoes):
         lista_populacao_nova.append(melhor_pai)
 
         lista_populacao = lista_populacao_nova
-    
-        for cromossomo in lista_populacao:
-            print(cromossomo.get_apitidao())
+         
+        auxiliar = lista_populacao.copy()
+        auxiliar = sorted(auxiliar , key=Cromossomo.get_apitidao)  
+        lista_melhor_apitidao.append(auxiliar[0].apitidao)
         
-        print()
-
-    return 0
+    return lista_melhor_apitidao
