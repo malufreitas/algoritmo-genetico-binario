@@ -45,9 +45,13 @@ def crossover(cromossomoA,cromossomoB):
     
     valorBinfilhoUm = parteUmA + parteDoisB
     filhoUm = Cromossomo(valorBinfilhoUm)
+    filhoUm.decodificado = decodificacao(valorBinfilhoUm)
+    filhoUm.apitidao = calcula_aptidao(filhoUm.decodificado)
 
     valorBinfilhoDois = parteUmB + parteDoisA
     filhoDois = Cromossomo(valorBinfilhoDois)
+    filhoDois.decodificado = decodificacao(valorBinfilhoDois)
+    filhoDois.apitidao = calcula_aptidao(filhoDois.decodificado)
 
     return filhoUm,filhoDois
 
@@ -75,7 +79,8 @@ def gera_populacao_inicial(numero_populacao):
     for _ in range(numero_populacao):
         valor_binario = monta_valor_binario()
         cromossomo = Cromossomo(valor_binario)
-        cromossomo.apitidao = calcula_aptidao(decodificacao(valor_binario))
+        cromossomo.decodificado = decodificacao(valor_binario)
+        cromossomo.apitidao = calcula_aptidao(cromossomo.decodificado)
         lista_populacao.append(cromossomo)
 
     return lista_populacao
@@ -113,7 +118,7 @@ def algoritmo_genetico(numero_populacao, iteracoes):
 
             #Crossover
             taxaCrossover = random.uniform(0,1)
-            if (taxaCrossover <= 0.6):
+            if(taxaCrossover <= 0.6):
                 filho1,filho2 = crossover(cromossomoA,cromossomoB)            
             else:
                 filho1,filho2 = cromossomoA,cromossomoB
@@ -123,30 +128,41 @@ def algoritmo_genetico(numero_populacao, iteracoes):
             filho2 = mutacao(filho2)
 
             #Novas aptidoes dos filhos
-            filho1.apitidao = calcula_aptidao(decodificacao(filho1.valor_binario))
-            filho2.apitidao = calcula_aptidao(decodificacao(filho2.valor_binario))
+            filho1.decodificado = decodificacao(filho1.valor_binario)
+            filho1.apitidao = calcula_aptidao(filho1.decodificado)
+
+            filho2.decodificado = decodificacao(filho2.valor_binario)
+            filho2.apitidao = calcula_aptidao(filho2.decodificado)
             
             #Inserção na nova população
             lista_populacao_nova.append(filho1)
             lista_populacao_nova.append(filho2)
 
         #Ordenação dos filhos em ordem crescente de aptidão
-        lista_populacao_nova = sorted(lista_populacao_nova , key=Cromossomo.get_apitidao)        
+        auxiliar = lista_populacao_nova.copy()
+        auxiliar = sorted(auxiliar , key=Cromossomo.get_apitidao)      
+              
         #Removendo o pior filho
-        # print(lista_populacao_nova)
-        del lista_populacao_nova[0]
+        piorFilho = lista_populacao_nova[-1].valor_binario	    
+
+        for cromossomo in lista_populacao_nova:
+            if cromossomo.valor_binario == piorFilho:
+                lista_populacao_nova.remove(cromossomo)
+                break
 
         #Ordenação dos pais em ordem crescente de aptidão
-        lista_populacao = sorted(lista_populacao , key=Cromossomo.get_apitidao)
-        melhor_pai = lista_populacao[-1]
+        auxiliar = lista_populacao.copy()
+        lista_populacao_ordenada = sorted(auxiliar , key=Cromossomo.get_apitidao)
+        melhor_pai = lista_populacao_ordenada[0]
         
         #E mantendo o melhor pai da população anterior para a próxima geração    
         lista_populacao_nova.append(melhor_pai)
 
         lista_populacao = lista_populacao_nova
-        # print(len(lista_populacao))
     
-    for cromossomo in lista_populacao:
-        print(cromossomo.get_apitidao())
+        for cromossomo in lista_populacao:
+            print(cromossomo.get_apitidao())
+        
+        print()
 
     return 0
