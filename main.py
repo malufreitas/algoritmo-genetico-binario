@@ -2,16 +2,18 @@ import persistencia
 from algoritmogenetico import algoritmo_genetico
 
 def main():
-    lista_resultado = []
-    for _ in range(10):
-        lista_resultado.append(algoritmo_genetico(10,10))
+    iteracoes = [10]
+    geracoes = [10,20]
+    populacao = [10,20]
     
-    persistencia.salvar_dados("Teste10",lista_resultado)
+    for p in populacao:
+        for g in geracoes:
+            for i in iteracoes:
+                lista_resultado = []
+                nomeArquivo = "Teste-{}iteracoes-{}populacao-{}geracao".format(i,p,g)
+                for j in range(i):
+                    lista_resultado.append(algoritmo_genetico(p,g))
+                persistencia.salvar_dados(nomeArquivo,lista_resultado)
 
-    lista_resultado = []
-    for _ in range(10):
-        lista_resultado.append(algoritmo_genetico(10,20))
-    
-    persistencia.salvar_dados("Teste20",lista_resultado)
 if __name__ == "__main__":
     main()

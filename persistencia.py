@@ -14,11 +14,11 @@ def salvar_dados(nome_arquivo,lista_resultado):
         arquivo.write('\n')
 
         #Conteudo
-        for i in range(len(lista_resultado)):
+        for i in range(len(lista_resultado[0])):
             data = []
             arquivo.write("MelhorApt" + str(i + 1) + " ")
             for lista in lista_resultado:
-                particula_global = lista[i]
+                particula_global = lista[i].apitidao
                 particula_global = round(particula_global,precisao_casas_decimais)
                 data.append(particula_global)
                 arquivo.write(str(particula_global).replace('.',',') + " ")
