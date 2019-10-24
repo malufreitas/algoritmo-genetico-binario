@@ -10,7 +10,7 @@ O Algoritmo Genético Binário representa o uso computacional da Inteligência A
 
 A aplicação deste código consiste em tentar várias soluções começando por levantamento de alguns indíviduos escolhidos via seleção natural, no qual dentro esse grupo é realizada a aplicação de cruzamento (*crossover*) e calculado uma chance de ocorrência de mutação para o genoma (bits) nas gerações seguintes.
 
-Os algoritmos genéticos possuem algumas características como por exemplo não ser deterministico, trabalhar com uma populaçã de soluções de maneira simultanea e utilizar apenas informações de custo e recompensa. Também são computacionalmente fáceis de serem implementados e são facilmente hibridizados com outras técnicas dentro do campo de pesquisa da Inteligência Artificial.
+Os algoritmos genéticos possuem algumas características como por exemplo não ser deterministico, trabalhar com uma população de soluções de maneira simultanea e utilizar apenas informações de custo e recompensa. Também são computacionalmente fáceis de serem implementados e são facilmente hibridizados com outras técnicas dentro do campo de pesquisa da Inteligência Artificial.
 
 ## Problema Proposto
 
@@ -115,8 +115,10 @@ A estrutura da implementação tomou como base não somente o pseudocódigo pass
 
 As tabelas a seguir mostram os resultados gráficos (média e melhor) de gBest em cada iteração, processados em uma pilha de 10 testes para os casos de:
 
-- [20 Gerações e 10 Indivíduos]()
-- [10 Gerações e 10 Indivíduos]()
+- [10 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-10geracao.PNG)
+- [10 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-20populacao-10geracao.PNG)
+- [20 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-20geracao.PNG)
+- [20 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-20populacao-20geracao.PNG)
 
 ### Referências
 
