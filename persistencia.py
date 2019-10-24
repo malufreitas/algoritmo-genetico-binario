@@ -18,7 +18,7 @@ def salvar_dados(nome_arquivo,lista_resultado):
             data = []
             arquivo.write("MelhorApt" + str(i + 1) + " ")
             for lista in lista_resultado:
-                particula_global = lista[i].apitidao
+                particula_global = lista[i].aptidao
                 particula_global = round(particula_global,precisao_casas_decimais)
                 data.append(particula_global)
                 arquivo.write(str(particula_global).replace('.',',') + " ")
