@@ -17,7 +17,7 @@ Os algoritmos genéticos possuem algumas características como por exemplo não 
 O desafio proposto pelo professor é utilizar a implementação de algum algortmo genético para minimizar a função descrita abaixo:
 
 <p align="center">
-  <img  src="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/funcao.png">
 </p>
 
 **Restrições**
@@ -73,47 +73,42 @@ A estrutura da implementação tomou como base não somente o pseudocódigo pass
 **Populacao Inicial**
 
 <p align="center">
-  <img  src="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/populacao_inicial.png">
 </p>
 
 **Selecao por Torneio**
 
 <p align="center">
-  <img  src="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/selecao_torneio.png">
 </p>
 
 **Decodificação**
 
 <p align="center">
-  <img  src="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/decodificacao.png">
 </p>
 
 **Cross Over**
 
 <p align="center">
-  <img  src="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/crossover.png">
 </p>
 
 **Mutação**
 
 <p align="center">
-  <img  src="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/mutacao.png">
 </p>
 
 **Remove pior filho**
 
 <p align="center">
-  <img  src="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/remove_pior_filho.png">
 </p>
 
 **Mantem melhor pai**
 <p align="center">
-  <img  src="">
-</p>
-
-****
-<p align="center">
-  <img  src="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/mantem_pai.png">
 </p>
 
 ## Resultados
@@ -121,6 +116,7 @@ A estrutura da implementação tomou como base não somente o pseudocódigo pass
 As tabelas a seguir mostram os resultados gráficos (média e melhor) de gBest em cada iteração, processados em uma pilha de 10 testes para os casos de:
 
 - [20 Gerações e 10 Indivíduos]()
+- [10 Gerações e 10 Indivíduos]()
 
 ### Referências
 
