@@ -116,7 +116,7 @@ A estrutura da implementação tomou como base não somente o pseudocódigo pass
 As tabelas a seguir mostram os resultados gráficos (média e melhor) de gBest em cada iteração, processados em uma pilha de 10 testes para os casos de:
 
 - [10 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-10geracao.PNG)
-- [10 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-20geracao.PNG)
+- [10 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-20populacao-10geracao.PNG)
 - [20 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-20geracao.PNG)
 - [20 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-20populacao-20geracao.PNG)
 
