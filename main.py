@@ -13,7 +13,7 @@ def main():
                 nomeArquivo = "Teste-{}iteracoes-{}populacao-{}geracao".format(i,p,g)
                 for j in range(i):
                     lista_resultado.append(algoritmo_genetico(p,g))
-                persistencia.salvar_dados(nomeArquivo,lista_resultado)
+                persistencia.salvar_dados('testes/'+nomeArquivo,lista_resultado)
 
 if __name__ == "__main__":
     main()

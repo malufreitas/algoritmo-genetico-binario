@@ -18,7 +18,7 @@ def salvar_dados(nome_arquivo,lista_resultado):
             data = []
             arquivo.write("MelhorApt" + str(i + 1) + " ")
             for lista in lista_resultado:
-                particula_global = lista[i].aptidao
+                particula_global = round(lista[i].aptidao,4)
                 particula_global = round(particula_global,precisao_casas_decimais)
                 data.append(particula_global)
                 arquivo.write(str(particula_global).replace('.',',') + " ")
@@ -26,11 +26,11 @@ def salvar_dados(nome_arquivo,lista_resultado):
             lista = sorted(data , key=lambda t: t)
             
             #Media
-            media = statistics.mean(data)
+            media = round(statistics.mean(data),4)
             arquivo.write(str(media).replace('.',',') + " ")
 
             #Melhor
-            menor = lista[0]
+            menor = round(lista[0],4)
             arquivo.write(str(menor).replace('.',',') + " ")
 
             # #xBest

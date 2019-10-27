@@ -22,16 +22,15 @@ import random
 def mutacao(filho):
     enfermeira = ''
     for bit in filho.valor_binario:
+        bitM = bit  
         taxaMutacao = random.uniform(0,1)
         if(taxaMutacao <= 0.01):
-            if bit == '0':
-                enfermeira += '1'
-            else:
-                enfermeira += '0'
-        else:
-            enfermeira += bit            
+            bitM = abs(int(bitM)-1)            
+        enfermeira += str(bitM)            
     
     filho.valor_binario = enfermeira
+    filho.decodificado = decodificacao(filho.valor_binario)
+    filho.aptidao = calcula_aptidao(filho.decodificado)
     return filho
 
 def crossover(cromossomoA,cromossomoB):
@@ -96,13 +95,12 @@ def algoritmo_genetico(numero_populacao, geracoes):
     for _ in range (geracoes):
         lista_selecionados = []
 
-        for _ in range(0,len(lista_populacao)):
+        for i in range(len(lista_populacao)):
             # Aleatoriamente escolhe dois cromossomos para comparar
-            posicao = random.randint(0,len(lista_populacao)-1)
-            cromossomo_1 = lista_populacao[posicao]
+            cromossomo_1 = lista_populacao[i]
 
-            posicao = random.randint(0,len(lista_populacao)-1)
-            cromossomo_2 = lista_populacao[posicao]
+            posicao_Aleatoria = random.randint(0,len(lista_populacao)-1)
+            cromossomo_2 = lista_populacao[posicao_Aleatoria]
 
             # Compara qual cromossomo é o melhor (menor aptidao)
             if cromossomo_1.aptidao < cromossomo_2.aptidao:
@@ -125,14 +123,7 @@ def algoritmo_genetico(numero_populacao, geracoes):
 
             #Mutação
             filho1 = mutacao(filho1)
-            filho2 = mutacao(filho2)
-
-            #Novas aptidoes dos filhos
-            filho1.decodificado = decodificacao(filho1.valor_binario)
-            filho1.aptidao = calcula_aptidao(filho1.decodificado)
-
-            filho2.decodificado = decodificacao(filho2.valor_binario)
-            filho2.aptidao = calcula_aptidao(filho2.decodificado)
+            filho2 = mutacao(filho2)            
             
             #Inserção na nova população
             lista_populacao_nova.append(filho1)
