@@ -17,7 +17,7 @@ Os algoritmos genéticos possuem algumas características como por exemplo não 
 O desafio proposto pelo professor é utilizar a implementação de algum algortmo genético para minimizar a função descrita abaixo:
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/funcao.png">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/funcao.png?raw=true">
 </p>
 
 **Restrições**
@@ -73,52 +73,52 @@ A estrutura da implementação tomou como base não somente o pseudocódigo pass
 **Populacao Inicial**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/populacao_inicial.png">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/populacao_inicial.png?raw=true">
 </p>
 
 **Selecao por Torneio**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/selecao_torneio.png">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/selecao_torneio.png?raw=true">
 </p>
 
 **Decodificação**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/decodificacao.png">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/decodificacao.png?raw=true">
 </p>
 
 **Cross Over**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/crossover.png">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/crossover.png?raw=true">
 </p>
 
 **Mutação**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/mutacao.png">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/mutacao.png?raw=true">
 </p>
 
 **Remove pior filho**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/remove_pior_filho.png">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/remove_pior_filho.png?raw=true">
 </p>
 
 **Mantem melhor pai**
-<p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/mantem_pai.png">
+<p align="center" weigth="">
+  <img  src="https://github.com/malufreitas/algoritmo-genetico-binario/blob/master/images/mantem_pai.png?raw=true">
 </p>
 
 ## Resultados
 
 As tabelas a seguir mostram os resultados gráficos (média e melhor) de gBest em cada iteração, processados em uma pilha de 10 testes para os casos de:
 
-- [10 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-10geracao.PNG)
-- [10 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-20populacao-10geracao.PNG)
-- [20 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-20geracao.PNG)
-- [20 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-20populacao-20geracao.PNG)
+- [10 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-10geracao.png?raw=true)
+- [10 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-20populacao-10geracao.png?raw=true)
+- [20 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-20geracao.png?raw=true)
+- [20 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-20populacao-20geracao.png?raw=true)
 
 ### Referências
 
