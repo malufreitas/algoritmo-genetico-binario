@@ -8,7 +8,7 @@ def salvar_dados(nome_arquivo,lista_resultado):
         #Cabeçalho
         arquivo.write(" ")
         for i in range(len(lista_resultado)):
-            arquivo.write("Teste" + str(i+1) + " ")        
+            arquivo.write("Execucao" + str(i+1) + " ")        
         arquivo.write("Media"+ " ")
         arquivo.write("Melhor" + " ")
         arquivo.write('\n')
@@ -16,7 +16,7 @@ def salvar_dados(nome_arquivo,lista_resultado):
         #Conteudo
         for i in range(len(lista_resultado[0])):
             data = []
-            arquivo.write("MelhorApt" + str(i + 1) + " ")
+            arquivo.write(str(i + 1) + "ªMelhorApt")
             for lista in lista_resultado:
                 particula_global = round(lista[i].aptidao,4)
                 particula_global = round(particula_global,precisao_casas_decimais)
