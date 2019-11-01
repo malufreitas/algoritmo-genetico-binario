@@ -25,7 +25,7 @@ def mutacao(filho):
     for bit in filho.valor_binario:
         bitM = bit
         taxaMutacao = random.uniform(0, 1)
-        if(taxaMutacao <= 0.01):
+        if(taxaMutacao <= 0.07):
             bitM = abs(int(bitM)-1)
         enfermeira += str(bitM)
 
@@ -121,7 +121,7 @@ def algoritmo_genetico(numero_populacao, geracoes):
 
             # Crossover
             taxaCrossover = random.uniform(0, 1)
-            if(taxaCrossover <= 0.8):
+            if(taxaCrossover <= 0.6):
                 filho1, filho2 = crossover(cromossomoA, cromossomoB)
             else:
                 filho1, filho2 = cromossomoA, cromossomoB

@@ -16,7 +16,7 @@ def salvar_dados(nome_arquivo,lista_resultado):
         #Conteudo
         for i in range(len(lista_resultado[0])):
             data = []
-            arquivo.write(str(i + 1) + "ªMelhorApt")
+            arquivo.write(str(i + 1) + "ªMelhorApt ")
             for lista in lista_resultado:
                 particula_global = round(lista[i].aptidao,4)
                 particula_global = round(particula_global,precisao_casas_decimais)
